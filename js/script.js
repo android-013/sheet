@@ -42,4 +42,6 @@ function displayData(data) {
     });
 }
 
-setInterval(fetchData, 60000);
+setInterval(fetchData, 3600000); // Fetch data every hour
+fetchData(); // Initial fetch
+// End of snippet
