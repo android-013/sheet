@@ -2,18 +2,18 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
-    background-color: #f9f9f9;
+    background-color: #000000;
 }
 
 h2 {
-    color: #333;
+    color: #ffffff;
 }
 
-.table-container {
+.data-table {
     width: 90%;
     margin: auto;
     overflow-x: auto;
-    background: white;
+    background: rgb(0, 0, 0);
     padding: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -22,22 +22,23 @@ h2 {
 table {
     width: 100%;
     border-collapse: collapse;
+    color: #ffffff;
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #ff0000;
     padding: 10px;
     text-align: left;
     white-space: nowrap; /* Keep cell text in one line */
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #000000;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #000000;
 }
 
 td {
