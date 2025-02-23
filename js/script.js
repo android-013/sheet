@@ -42,5 +42,4 @@ function displayData(data) {
     });
 }
 
-fetchData();
-// No additional code needed here
+setInterval(fetchData, 60000);
