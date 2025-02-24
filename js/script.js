@@ -55,6 +55,15 @@ function searchTable() {
     }
 }
 
+function slideTable(direction) {
+    const container = document.getElementById('table-container');
+    if (direction === 'left') {
+        container.scrollLeft -= 100;
+    } else if (direction === 'right') {
+        container.scrollLeft += 100;
+    }
+}
+
 setInterval(fetchData, 3600000); // Fetch data every hour
 fetchData(); // Initial fetch
 // End of snippet

@@ -11,12 +11,17 @@
 
     <input type="text" id="search-box" placeholder="Search..." onkeyup="searchTable()">
 
-    <table id="data-table">
-        <thead>
-            <tr id="table-header"></tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-    </table>
+    <div id="table-container" style="overflow-x: auto;">
+        <table id="data-table">
+            <thead>
+                <tr id="table-header"></tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <button class="slide-button" onclick="slideTable('left')">Slide Left</button>
+    <button class="slide-button" onclick="slideTable('right')">Slide Right</button>
 
     <script src="js/script.js"></script>
 </body>
