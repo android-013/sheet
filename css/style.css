@@ -9,6 +9,15 @@ h2 {
     color: #ffffff;
 }
 
+#search-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 .data-table {
     width: 90%;
     margin: auto;
