@@ -41,6 +41,19 @@ function displayData(data) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const tableContainer = document.getElementById("table-container");
+    const scrollbar = document.querySelector(".scrollbar");
+
+    scrollbar.addEventListener("scroll", function () {
+        tableContainer.scrollLeft = scrollbar.scrollLeft;
+    });
+
+    tableContainer.addEventListener("scroll", function () {
+        scrollbar.scrollLeft = tableContainer.scrollLeft;
+    });
+});
+
 function searchTable() {
     let input = document.getElementById("search-box").value.toLowerCase();
     const tableBody = document.getElementById("table-body");
