@@ -2,14 +2,14 @@ const sheetId = "1IPMZmcUqCFy0Mk-PjNbIkMDfVpo4yrSIv9Fw6BRYXI4";  // Replace with
 const apiKey = "AIzaSyCuTxrr8asiw3m_viVwVrFL8rkUzoOCib0";    // Replace with your Google API Key
 const sheetName = "Monochrome";       // Change if needed
 
-
 async function fetchData() {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${apiKey}`;
     
     try {
         const response = await fetch(url);
         const data = await response.json();
-        displayData(data.values);
+        allData = data.values;
+        displayData(allData);
     } catch (error) {
         console.error("Error fetching data:", error);
     }
@@ -19,7 +19,6 @@ function displayData(data) {
     const tableHeader = document.getElementById("table-header");
     const tableBody = document.getElementById("table-body");
 
-    // Clear existing data
     tableHeader.innerHTML = "";
     tableBody.innerHTML = "";
 
@@ -39,6 +38,17 @@ function displayData(data) {
             tr.appendChild(td);
         });
         tableBody.appendChild(tr);
+    });
+}
+
+// Search Function
+function searchTable() {
+    let input = document.getElementById("search-box").value.toLowerCase();
+    const tableBody = document.getElementById("table-body");
+    
+    Array.from(tableBody.getElementsByTagName("tr")).forEach(row => {
+        let text = row.textContent.toLowerCase();
+        row.classList.toggle("hidden", !text.includes(input));
     });
 }
 
