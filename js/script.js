@@ -1,6 +1,6 @@
 const sheetId = "1IPMZmcUqCFy0Mk-PjNbIkMDfVpo4yrSIv9Fw6BRYXI4";  // Replace with your Sheet ID
 const apiKey = "AIzaSyCuTxrr8asiw3m_viVwVrFL8rkUzoOCib0";    // Replace with your Google API Key
-const sheetName = "Monochrome";       // Change if needed
+const sheetName = "Sheet1";       // Change if needed
 
 async function fetchData() {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${apiKey}`;
