@@ -41,15 +41,18 @@ function displayData(data) {
     });
 }
 
-// Search Function
 function searchTable() {
     let input = document.getElementById("search-box").value.toLowerCase();
     const tableBody = document.getElementById("table-body");
-    
-    Array.from(tableBody.getElementsByTagName("tr")).forEach(row => {
-        let text = row.textContent.toLowerCase();
-        row.classList.toggle("hidden", !text.includes(input));
-    });
+    const rows = tableBody.getElementsByTagName("tr");
+
+    for (let row of rows) {
+        let text = "";
+        for (let cell of row.getElementsByTagName("td")) {
+            text += cell.textContent.toLowerCase() + " "; // Combine all cell texts
+        }
+        row.style.display = text.includes(input) ? "" : "none"; // Show/hide rows
+    }
 }
 
 setInterval(fetchData, 3600000); // Fetch data every hour
