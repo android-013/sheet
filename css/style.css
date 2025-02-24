@@ -54,6 +54,44 @@ td {
     min-width: 100px; /* Adjust width based on Google Sheets */
 }
 
-.table-container {
+#table-container {
     overflow-x: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#table-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.slide-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color: #cc0000;
+}
+
+#slidebar {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    position: relative;
+}
+
+#slidebar-fill {
+    height: 100%;
+    background-color: #ff0000;
+    border-radius: 5px;
+    transition: width 0.3s ease;
 }
