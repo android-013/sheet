@@ -9,7 +9,12 @@
 <body>
     <h2>Google Sheets Data</h2>
 
+    <button class="slide-button" onclick="slideTable('left')">Slide Left</button>
+
     <input type="text" id="search-box" placeholder="Search..." onkeyup="searchTable()">
+
+    
+    <button class="slide-button" onclick="slideTable('right')">Slide Right</button>
 
     <div id="table-container">
         <table id="data-table">
@@ -19,9 +24,6 @@
             <tbody id="table-body"></tbody>
         </table>
     </div>
-    
-    <div></div>
-    
     
     <button class="slide-button" onclick="slideTable('left')">Slide Left</button>
     <button class="slide-button" onclick="slideTable('right')">Slide Right</button>
